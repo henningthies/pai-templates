@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+bun.lock
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Personal data (users should keep their own private)
+daily/20*
+weekly/20*
+inbox/*.md
+!inbox/.gitkeep
+knowledge/research/*.md
+knowledge/learnings/*.md
+knowledge/decisions/*.md
+!knowledge/*/.template.md
+projects/*.md
+!projects/.template.md
