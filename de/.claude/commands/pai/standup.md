@@ -6,9 +6,16 @@ Nutze den **accountability** Skill aus `.claude/skills/accountability/SKILL.md`
 
 ## Bevor du antwortest
 
-1. **Lies die letzten 7 Tage** aus daily/[YYYY]-KW[XX]/*.md
+0. **WICHTIG: Ermittle das aktuelle Datum**
+   - Führe `date +%Y-%m-%d` aus um das heutige Datum zu bestimmen
+   - Dieses Datum ist "HEUTE" für alle folgenden Schritte
+   - Check ob daily/[YYYY]-KW[XX]/[HEUTE].md bereits existiert
+   - Falls ja: User hat schon einen Standup heute gemacht → kurzes Update statt vollem Standup
+
+1. **Lies die letzten 7 Tage** aus daily/[YYYY]-KW[XX]/*.md (BIS GESTERN, nicht heute)
    - Die Dateien sind nach Kalenderwoche gruppiert (z.B. daily/2026-KW03/)
    - Für jeden Tag: Was war Commit? Was wurde erledigt [x]? Was blieb offen [ ]?
+   - NICHT das heutige Datum inkludieren - das ist noch nicht abgeschlossen
 
 2. **Check inbox/** (CORE-Workflow)
    - Zähle unverarbeitete Items (alle .md Files außer .gitkeep)
@@ -29,17 +36,18 @@ Nutze den **accountability** Skill aus `.claude/skills/accountability/SKILL.md`
 ## Output-Format
 
 ```
-Guten Morgen [Name]!
+Guten Morgen [Name]! (Datum: [HEUTE])
 
 [Wenn inbox nicht leer:]
 📥 INBOX ([X] offen)
 • [Titel aus File] - vor [N] Tag(en)
 → Verarbeiten mit /pai:process
 
-📊 DEINE WOCHE
+📊 DEINE WOCHE (bis gestern)
 ┌────────────────────────────────────────────────┐
 │ 16.01: [Erledigte ✓] [Offene →]                │
 │ ...                                            │
+│ [GESTERN]: [Status]                            │
 └────────────────────────────────────────────────┘
 
 [Wenn offene Items:]
@@ -52,15 +60,15 @@ Guten Morgen [Name]!
 
 ─────────────────────────────────────────────────
 
-Was ist heute dein Fokus?
+Was ist heute ([HEUTE]) dein Fokus?
 ```
 
 ## Nach der Antwort
 
-Wenn der User seinen Fokus nennt, erstelle/update daily/[YYYY]-KW[XX]/[YYYY-MM-DD].md (KW = Kalenderwoche des Datums):
+Wenn der User seinen Fokus nennt, erstelle/update daily/[YYYY]-KW[XX]/[HEUTE].md (verwende das ermittelte HEUTE-Datum, KW = Kalenderwoche des Datums):
 
 ```markdown
-# Daily: [YYYY-MM-DD]
+# Daily: [HEUTE im Format YYYY-MM-DD]
 
 ## Commit
 - [ ] [Task 1 vom User]
@@ -75,15 +83,20 @@ Wenn der User seinen Fokus nennt, erstelle/update daily/[YYYY]-KW[XX]/[YYYY-MM-D
 Created: [HH:MM] via /standup
 ```
 
+**WICHTIG:** Falls die Datei bereits existiert (User macht zweiten Standup am gleichen Tag), füge neue Tasks zu ## Commit hinzu statt die Datei zu überschreiben.
+
 ## Verhaltensregeln
 
 ALWAYS:
-- Starte mit Daten aus der History, nicht mit Fragen
+- **Ermittle ZUERST das aktuelle Datum mit `date +%Y-%m-%d`**
+- Starte mit Daten aus der History (BIS GESTERN), nicht mit Fragen
 - Zeige konkrete Zahlen (X Tage, Y Mal)
 - Bei Pattern: Frage nach dem WARUM
 - Halte es kurz und scannbar
+- Zeige das aktuelle Datum im Output damit User weiß für welchen Tag der Standup ist
 
 NEVER:
 - Starte mit "Guten Morgen, was steht an?" ohne History-Check
 - Ignoriere offene Tasks aus den letzten Tagen
 - Sei passiv-aggressiv
+- Verwende HEUTE's Datum für History-Analyse (heute ist noch nicht abgeschlossen!)
