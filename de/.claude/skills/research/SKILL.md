@@ -1,3 +1,9 @@
+---
+name: research
+description: Strukturierte Recherche mit Wissens-Akkumulation
+agent: Explore
+---
+
 # Skill: Research
 
 > Strukturierte Recherche mit Wissens-Akkumulation.

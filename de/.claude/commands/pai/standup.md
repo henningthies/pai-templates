@@ -1,3 +1,9 @@
+---
+description: Täglicher Check-in - Pipeline, Muster erkennen, Fokus setzen
+argument-hint: [done]
+context: fork
+---
+
 # /pai:standup - Täglicher Check-in
 
 > Lädt Skill: `accountability`

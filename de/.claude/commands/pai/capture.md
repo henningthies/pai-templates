@@ -1,3 +1,9 @@
+---
+description: Schnelle Ideen-Erfassung in die Inbox
+argument-hint: [idee oder gedanke]
+context: fork
+---
+
 # /pai:capture - Schnelle Ideen-Erfassung
 
 ## Zweck

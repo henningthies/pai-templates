@@ -1,3 +1,8 @@
+---
+description: Backup & synchronization of Personal AI data
+disable-model-invocation: true
+---
+
 # Sync - Backup & Synchronization
 
 Help the user back up and synchronize their Personal AI data.

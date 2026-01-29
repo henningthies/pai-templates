@@ -1,3 +1,9 @@
+---
+description: Wöchentliche Reflexion - Muster erkennen, Learnings festhalten
+argument-hint: [month]
+context: fork
+---
+
 # /pai:review - Wöchentliche Reflexion
 
 > Lädt Skill: `reflection`

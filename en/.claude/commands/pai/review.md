@@ -1,3 +1,9 @@
+---
+description: Weekly reflection - recognize patterns, capture learnings
+argument-hint: [month]
+context: fork
+---
+
 # /pai:review - Weekly Reflection
 
 > Loads skill: `reflection`

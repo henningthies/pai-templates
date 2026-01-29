@@ -1,3 +1,9 @@
+---
+description: Daily check-in - pipeline, pattern recognition, set focus
+argument-hint: [done]
+context: fork
+---
+
 # /pai:standup - Daily Check-in
 
 > Loads skill: `accountability`

@@ -1,3 +1,9 @@
+---
+description: Quick idea capture to inbox
+argument-hint: [idea or thought]
+context: fork
+---
+
 # /pai:capture - Quick Idea Capture
 
 ## Purpose

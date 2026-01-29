@@ -1,3 +1,9 @@
+---
+name: research
+description: Structured research with knowledge accumulation
+agent: Explore
+---
+
 # Skill: Research
 
 > Structured research with knowledge accumulation.
