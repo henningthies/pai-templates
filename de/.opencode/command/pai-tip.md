@@ -1,21 +1,20 @@
 ---
-description: "Täglicher Lerntip - 22 Tips in 3 Wochen"
+description: "Täglicher Lerntip - 21 Tips in 3 Wochen"
 ---
 
 # /pai-tip - Täglicher Lerntip
 
-> Dein täglicher Tip um Personal AI besser zu nutzen. 22 Tips in 3 Wochen.
+> 21 Tips in 3 Wochen um Personal AI besser zu nutzen.
 
-## Deine Aufgabe
+## Ablauf
 
-1. **Lies den Fortschritt** aus `progress/tips.md`
-   - Welcher Tip wurde zuletzt gezeigt?
-   - Wann wurde er gezeigt?
+1. **Lies Fortschritt** aus `progress/tips.md`
+   - Welcher Tip zuletzt gezeigt? Wann?
 
-2. **Wähle den nächsten Tip**
-   - Wenn heute noch kein Tip: zeige den nächsten in der Reihe
-   - Wenn User `/pai-tip next` sagt: überspringe zum nächsten
-   - Wenn User `/pai-tip [nummer]` sagt: zeige diesen spezifischen Tip
+2. **Wähle nächsten Tip**
+   - Heute noch kein Tip: zeige nächsten in der Reihe
+   - `/pai-tip next`: überspringe zum nächsten
+   - `/pai-tip [nummer]`: zeige spezifischen Tip
 
 3. **Lies den Tip** aus `tips/`
 
@@ -23,7 +22,7 @@ description: "Täglicher Lerntip - 22 Tips in 3 Wochen"
    ```
    Week 1 (Basics):
    1  → tips/week-1/01-standup.md
-   2  → tips/week-1/02-done.md
+        (Tip 2 entfernt - Done-Tracking abgeschafft)
    3  → tips/week-1/03-daily-notes.md
    4  → tips/week-1/04-coach.md
    5  → tips/week-1/05-research.md
@@ -50,10 +49,10 @@ description: "Täglicher Lerntip - 22 Tips in 3 Wochen"
    22 → tips/week-3/22-core-workflow.md
    ```
 
-4. **Zeige den Tip** im Format:
+4. **Zeige den Tip:**
 
 ```
-Tip #[X] von 22 - [Kategorie]
+Tip #[X] von 21 — [Kategorie]
 
 ## [Titel]
 
@@ -65,27 +64,27 @@ Probier es: [Konkreter Aufruf zum Ausprobieren]
 Nächster Tip: /pai-tip (morgen) oder /pai-tip next (jetzt)
 ```
 
-5. **Update den Fortschritt** (im Hintergrund)
-   - Update `progress/tips.md` NACH dem Anzeigen des Tips
-   - Zeige den Tip sofort - Update ist sekundär
+5. **Update Fortschritt** (im Hintergrund)
+   - Update `progress/tips.md` mit aktuellem Tip und Datum
 
-## Wenn alle 22 Tips durch
+## Wenn alle 21 Tips durch
 
 ```
-Du hast alle 22 Tips durchgearbeitet!
+Du hast alle 21 Tips durchgearbeitet!
 
-Du kennst jetzt Personal AI in- und auswendig. Zeit für den nächsten Schritt:
--> Erstelle deinen ersten eigenen Skill (siehe EXTENDING.md)
-
-Tip-Archiv: /pai-tip [1-22] um einen Tip nochmal zu sehen
+Du kennst jetzt Personal AI in- und auswendig.
+Tip-Archiv: /pai-tip [1-22] um einen Tip nochmal zu sehen (Tip 2 übersprungen)
 ```
 
-## ALWAYS
-- Zeige den Tip SOFORT - keine Tool-Outputs vorher
-- Zeige nur EINEN Tip pro Aufruf
+## Verhaltensregeln
+
+### ALWAYS
+- Zeige den Tip SOFORT
+- Nur EINEN Tip pro Aufruf
 - Mach den Tip praktisch - immer mit "Probier es"
 - Halte Tips kurz und actionable
+- Progress-Update im Hintergrund
 
-## NEVER
-- Zeige nie mehrere Tips auf einmal
-- Überspringe keine Tips automatisch
+### NEVER
+- Zeige mehrere Tips auf einmal
+- Überspringe Tips automatisch

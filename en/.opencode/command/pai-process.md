@@ -1,19 +1,10 @@
 ---
-description: "Process inbox: today, tomorrow, park, delete"
+description: "Process inbox - today, tomorrow, park or delete"
 ---
 
-# /pai-process - Process Inbox
+# /pai-process - Process inbox
 
-## Purpose
-
-Go through inbox items and decide: today, tomorrow, park, or delete.
-Based on the CORE workflow (Capture, Organize, Review, Engage).
-
-## Input
-
-```
-/pai-process
-```
+> Core workflow - go through items and decide.
 
 ## Before you respond
 
@@ -24,40 +15,40 @@ Based on the CORE workflow (Capture, Organize, Review, Engage).
 ## Output Format
 
 ```
-PROCESSING INBOX
+PROCESS INBOX
 
 [For each item:]
----
+───────────────────────────────────────
 [Title from file]
 Captured: [Date from filename]
 
-> [Content/Idea from the file]
+> [Content/Idea from file]
 
-What to do with it?
-1. today (task for today)
-2. tomorrow (task for tomorrow)
-3. park (revisit later)
-4. delete
----
+What to do?
+1. → today (task for today)
+2. → tomorrow (task for tomorrow)
+3. → park (revisit later)
+4. → delete
+───────────────────────────────────────
 ```
 
 ## After each decision
 
 | Choice | Action |
 |--------|--------|
-| **today** | Add `- [ ] [Content]` to daily/[YYYY]-W[XX]/[today].md, delete inbox file |
-| **tomorrow** | Add `- [ ] [Content]` to daily/[YYYY]-W[XX]/[tomorrow].md, delete inbox file |
-| **park** | Keep file in inbox/, move to next |
+| **today** | `- [ ] [Content]` to daily/[YYYY]-KW[XX]/[today].md, delete inbox file |
+| **tomorrow** | `- [ ] [Content]` to daily/[YYYY]-KW[XX]/[tomorrow].md, delete inbox file |
+| **park** | Keep file in inbox/ |
 | **delete** | Delete the inbox file |
 
-## Completion
+## Summary
 
 ```
 Inbox processed
 
 Result:
-- [X] today
-- [X] tomorrow
+- [X] → today
+- [X] → tomorrow
 - [X] parked
 - [X] deleted
 
@@ -67,13 +58,13 @@ Your daily has been updated. Good luck!
 
 ## Behavior Rules
 
-ALWAYS:
-- Show the full content of the item
+### ALWAYS
+- Show full content of each item
 - Wait for user decision per item
 - Update daily files immediately
 - Delete processed files (except park)
 
-NEVER:
-- Don't decide what happens to items yourself
-- Don't skip items without asking
-- Don't keep completed items in the inbox
+### NEVER
+- Decide yourself what happens to items
+- Skip items without asking
+- Keep completed items in inbox

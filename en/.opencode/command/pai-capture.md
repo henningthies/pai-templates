@@ -1,12 +1,10 @@
 ---
-description: "Quick idea capture without analysis"
+description: "Quick idea capture to inbox"
 ---
 
-# /pai-capture - Quick Idea Capture
+# /pai-capture - Quick idea capture
 
-## Purpose
-
-Quickly capture an idea, thought, or note without analysis.
+> Fire-and-forget - capture ideas without analysis.
 
 ## Input
 
@@ -14,23 +12,12 @@ Quickly capture an idea, thought, or note without analysis.
 /pai-capture [Idea or thought]
 ```
 
-## Output
+## Process
 
-```
-Saved to inbox/[YYYY-MM-DD]-[slug].md
-
-Should I later:
-- [ ] Evaluate the idea (/pai-coach)
-- [ ] Research it (/pai-research)
-- [ ] Just park it for now
-```
-
-## Storage Format
-
-inbox/[YYYY-MM-DD]-[slug].md:
+Save immediately in `inbox/[YYYY-MM-DD]-[slug].md`:
 
 ```markdown
-# [Title/Brief description]
+# [Title/Short description]
 
 **Captured:** [YYYY-MM-DD HH:MM]
 **Status:** inbox
@@ -47,14 +34,25 @@ inbox/[YYYY-MM-DD]-[slug].md:
 - [ ] Park
 ```
 
+## Output
+
+```
+Saved in inbox/[YYYY-MM-DD]-[slug].md
+
+Want me to later:
+- Evaluate the idea (/pai-coach)
+- Research it (/pai-research)
+- Just park it for now
+```
+
 ## Behavior Rules
 
-ALWAYS:
+### ALWAYS
 - Save immediately without many questions
 - Offer follow-up options
-- Keep it quick and simple
+- Keep it fast and simple
 
-NEVER:
-- Analyze the idea without being asked
+### NEVER
+- Analyze the idea unsolicited
 - Ask many follow-up questions
 - Make it complicated

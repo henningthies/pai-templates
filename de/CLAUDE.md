@@ -31,14 +31,17 @@ Bei jedem Command:
 | Rolle | Command | Wann nutzen |
 |-------|---------|-------------|
 | Accountability | `/pai:standup` | Täglicher Check-in |
-| Capture | `/pai:capture` | Gedanken schnell festhalten |
-| Process | `/pai:process` | Inbox verarbeiten |
 | Coach | `/pai:coach` | Strategische Fragen |
 | Rechercheur | `/pai:research` | Infos beschaffen |
 | Reflexion | `/pai:review` | Wöchentlich lernen |
 | Texter | `/pai:write` | Texte erstellen |
 | Editor | `/pai:edit` | Texte verbessern |
-| Sync | `/pai:sync` | Backup & Synchronisierung |
+| Notizen | `/pai:note` | Meeting-Notizen |
+| Capture | `/pai:capture` | Schnelle Ideen-Erfassung |
+| Process | `/pai:process` | Inbox verarbeiten |
+| Tip | `/pai:tip` | Täglicher Lerntip |
+| Setup | `/pai:setup` | Onboarding Wizard |
+| Sync | `/pai:sync` | Backup & Sync |
 
 ## Kommunikations-Defaults
 

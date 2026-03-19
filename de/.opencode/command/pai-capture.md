@@ -1,12 +1,10 @@
 ---
-description: "Schnelle Ideen-Erfassung ohne Analyse"
+description: "Schnelle Ideen-Erfassung in die Inbox"
 ---
 
 # /pai-capture - Schnelle Ideen-Erfassung
 
-## Zweck
-
-Schnell eine Idee, einen Gedanken oder eine Notiz festhalten ohne Analyse.
+> Fire-and-forget - Idee festhalten ohne Analyse.
 
 ## Input
 
@@ -14,20 +12,9 @@ Schnell eine Idee, einen Gedanken oder eine Notiz festhalten ohne Analyse.
 /pai-capture [Idee oder Gedanke]
 ```
 
-## Output
+## Ablauf
 
-```
-Gespeichert in inbox/[YYYY-MM-DD]-[slug].md
-
-Soll ich später:
-- [ ] Die Idee evaluieren (/pai-coach)
-- [ ] Dazu recherchieren (/pai-research)
-- [ ] Erstmal nur parken
-```
-
-## Speicherformat
-
-inbox/[YYYY-MM-DD]-[slug].md:
+Speichere sofort in `inbox/[YYYY-MM-DD]-[slug].md`:
 
 ```markdown
 # [Titel/Kurzbeschreibung]
@@ -47,14 +34,25 @@ inbox/[YYYY-MM-DD]-[slug].md:
 - [ ] Parken
 ```
 
+## Output
+
+```
+✓ Gespeichert in inbox/[YYYY-MM-DD]-[slug].md
+
+Soll ich später:
+- Die Idee evaluieren (/pai-coach)
+- Dazu recherchieren (/pai-research)
+- Erstmal nur parken
+```
+
 ## Verhaltensregeln
 
-ALWAYS:
+### ALWAYS
 - Speichere sofort ohne viele Fragen
 - Biete Follow-up Optionen an
 - Halte es schnell und einfach
 
-NEVER:
+### NEVER
 - Analysiere die Idee ungefragt
 - Stelle viele Rückfragen
 - Mach es kompliziert

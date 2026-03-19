@@ -1,23 +1,20 @@
 ---
-description: "Onboarding wizard for Personal AI setup"
+description: "Onboarding wizard - personalize Personal AI"
 ---
 
-# /pai-setup - Onboarding Wizard
+# /pai-setup - Onboarding wizard
 
-## Purpose
+> One-time setup to personalize your Personal AI.
 
-One-time setup to personalize Personal AI. Walks through questions and generates AGENTS.md.
-
-## Flow
-
-### Intro
+## Intro
 
 ```
 Welcome to Personal AI!
 
-I'll help you set up your personal AI system in the next 10 minutes.
+I'll help you set up your personal AI system
+in about 10 minutes.
 
-By the end, I will have:
+By the end I'll have:
 - Understood who you are and what you do
 - Learned your goals and challenges
 - Your preferences for how we work together
@@ -25,120 +22,93 @@ By the end, I will have:
 Ready? (yes/no)
 ```
 
-### Block 1: Your Profile (1-2 Min)
+## Block 1: Your Profile (1-2 min + background research)
 
 ```
 What's your name?
 > [Name]
 
 Do you have a LinkedIn profile or website?
-(This helps me understand you better)
-> [LinkedIn URL or Website URL]
+> [URL]
+
+Researching your profile in the background...
 ```
 
-**After entering links:**
-- Extract: Current role, Industry, Key skills
+After links are entered: Start background task with WebFetch.
+Extract: Current role, industry, key skills, focus areas.
 
-### Block 2: What do you do? (1 Min)
+## Block 2: What do you do? (1 min)
 
-**IF Research successful:**
+**If research successful:**
 ```
 Based on your profile I see:
+- Current role: [from LinkedIn/Website]
+- Industry: [Industry]
+- Key skills: [Skills]
 
-Current role: [Role from LinkedIn/Website]
-Industry: [Industry]
-Key skills: [Skills]
-
-Is this still accurate, or has something changed?
-> (Yes / No, correct)
+Is this still accurate, or has anything changed?
 ```
 
-**IF Research failed:**
+**If research failed:**
 ```
 What do you do professionally?
-(e.g., Freelance Designer, Solo Founder, Consultant...)
-> [Role]
-
 In which industry/niche?
-> [Industry]
 ```
 
-### Block 3: Your Situation (2 Min)
+## Block 3: Your Situation (2 min)
 
 ```
 Which description fits best?
-
-1. I work alone on a project
-2. I juggle multiple projects/clients
+1. I'm working solo on a project
+2. I'm juggling multiple projects/clients
 3. I have a main job + side project
 4. I'm building something new
 
-> [Selection]
-
 How many active projects do you have right now?
-> [Number]
-
 What are the most important ones?
-> [Project names]
 ```
 
-### Block 4: Your Goals (2 Min)
+## Block 4: Your Goals (2 min)
 
 ```
 What's your most important goal for the next 3 months?
-> [Goal]
-
-What's currently standing in the way?
-> [Challenge]
-
+What's standing in the way right now?
 If you could change one thing, what would it be?
-> [Change]
 ```
 
-### Block 5: Working Together (2 Min)
+## Block 5: Collaboration (2 min)
 
 ```
 How should I communicate with you?
-
 1. Direct and to the point
 2. Detailed with explanations
 3. As a sparring partner (challenging)
 4. Supportive and encouraging
 
-> [Selection]
-
 What should I ALWAYS do?
-(e.g., "challenge me", "ask before you start")
-> [ALWAYS]
-
 What should I NEVER do?
-(e.g., "generic tips", "excessive praise")
-> [NEVER]
 ```
 
-### Block 6: Work Style (2 Min)
+## Block 6: Work Style (2 min)
 
 ```
 What's your work rhythm?
-
 1. Fixed hours (9-5)
 2. Flexible based on energy
-3. Intense sprints with breaks
+3. Intensive sprints with breaks
 4. Evenings/nights
 
-> [Selection]
-
 What's your biggest weakness at work?
-(e.g., "Procrastination", "Overengineering", "Scope creep")
-> [Weakness]
 ```
 
 ## After the Wizard
 
-1. **Generate AGENTS.md** with all data
-2. **Create goals/current.md** with the 3-month goal
-3. **Create projects/*.md** for mentioned projects
-4. **Show summary:**
+1. **Wait for background research** (if still running)
+2. **Generate AGENTS.md** with combined data
+3. **Create goals/current.md** with the 3-month goal
+4. **Create projects/*.md** for mentioned projects
+5. **Update progress/tips.md** with tips 1-4 as seen
+6. **Show summary:**
 
 ```
 Setup complete! Here's your Personal AI:
@@ -147,62 +117,61 @@ AGENTS.md - I know you now
 goals/current.md - Your goal: [Goal]
 projects/ - [X] projects created
 
+─────────────────────────────────────────────────
+
 YOUR FOCUS
 [Goal for the next 3 months]
 
-## Your First Commands
+─────────────────────────────────────────────────
 
-/pai-standup - Daily check-in
-/pai-done - End of day wrap-up
-/pai-coach - Strategic consulting
-/pai-review - Weekly reflection
-/pai-research - Research
-/pai-write - Create texts
-/pai-edit - Improve texts
-/pai-capture - Capture ideas
+Your first tips to get started:
 
-Ready? Your first standup awaits: /pai-standup
+Tip 1: /pai-standup - Start every day with this.
+Tip 3: Daily Notes - Everything gets saved in daily/.
+Tip 4: /pai-coach - 3 perspectives instead of one opinion.
+
+More tips: /pai-tip (1 new tip daily)
+
+Ready? Your first standup awaits.
 ```
 
-## Generated AGENTS.md
+## Generated AGENTS.md Structure
 
 ```markdown
-# Personal AI - Your AI Co-worker
+# Personal AI - Your AI Business Partner
+
+> The system that grows with you.
 
 ## About Me
-
 **Name:** [Name]
 **Role:** [Role] in [Industry]
-**Focus:** [Current focus based on goals]
+**Location:** [if known]
+
+## Profiles
+- **LinkedIn:** [URL]
+- **Website:** [URL]
 
 ## Current Situation
+[Projects, focus, context]
 
-**Projects:**
-- [Project 1] - active
-- [Project 2] - active
-
-**Goal Q[X] [Year]:**
-[3-month goal]
-
-**Biggest Challenge:**
-[Challenge]
+## Goal Q[X] [Year]
+[3-month goal + strategy]
 
 ## Communication
-
 **Style:** [Selected style]
-
-**ALWAYS:**
-- [What user mentioned]
-- Reference my history
-- Challenge when it fits my goals
-
-**NEVER:**
-- [What user mentioned]
-- Be a yes-man
-- Ignore my history
+**ALWAYS:** [What user mentioned]
+**NEVER:** [What user mentioned]
 
 ## Work Style
-
 **Rhythm:** [Selected rhythm]
 **Weakness:** [Mentioned weakness]
+
+## Available Roles
+[Standard roles table]
+
+## Memory Access
+[Standard instructions]
+
+## File Structure
+[Standard structure]
 ```

@@ -31,14 +31,17 @@ With every command:
 | Role | Command | When to use |
 |------|---------|-------------|
 | Accountability | `/pai:standup` | Daily check-in |
-| Capture | `/pai:capture` | Quick thought capture |
-| Process | `/pai:process` | Process inbox |
 | Coach | `/pai:coach` | Strategic questions |
 | Researcher | `/pai:research` | Gather information |
 | Reflection | `/pai:review` | Weekly learning |
 | Writer | `/pai:write` | Create content |
 | Editor | `/pai:edit` | Improve content |
-| Sync | `/pai:sync` | Backup & synchronization |
+| Notes | `/pai:note` | Meeting notes |
+| Capture | `/pai:capture` | Quick idea capture |
+| Process | `/pai:process` | Process inbox |
+| Tip | `/pai:tip` | Daily learning tip |
+| Setup | `/pai:setup` | Onboarding wizard |
+| Sync | `/pai:sync` | Backup & sync |
 
 ## Communication Defaults
 

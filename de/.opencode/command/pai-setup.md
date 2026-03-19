@@ -1,16 +1,12 @@
 ---
-description: "Onboarding Wizard für Personal AI Setup"
+description: "Onboarding Wizard - Personal AI personalisieren"
 ---
 
 # /pai-setup - Onboarding Wizard
 
-## Zweck
+> Einmaliges Setup um Personal AI zu personalisieren.
 
-Einmaliges Setup um Personal AI zu personalisieren. Führt durch Fragen und generiert AGENTS.md.
-
-## Ablauf
-
-### Intro
+## Intro
 
 ```
 Willkommen bei Personal AI!
@@ -26,120 +22,93 @@ Am Ende habe ich:
 Bereit? (ja/nein)
 ```
 
-### Block 1: Dein Profil (1-2 Min)
+## Block 1: Dein Profil (1-2 Min + Hintergrund-Recherche)
 
 ```
 Wie heißt du?
 > [Name]
 
 Hast du ein LinkedIn-Profil oder eine Website?
-(Das hilft mir, dich besser zu verstehen)
-> [LinkedIn URL oder Website URL]
+> [URL]
+
+Researching your profile in the background...
 ```
 
-**Nach Eingabe der Links:**
-- Extrahiere: Aktuelle Rolle, Branche/Industrie, Key Skills
+Nach Eingabe der Links: Background-Task mit WebFetch starten.
+Extrahiere: Aktuelle Rolle, Branche, Key Skills, Fokus-Bereiche.
 
-### Block 2: Was machst du? (1 Min)
+## Block 2: Was machst du? (1 Min)
 
-**IF Research erfolgreich:**
+**Falls Research erfolgreich:**
 ```
 Basierend auf deinem Profil sehe ich:
-
-Aktuelle Rolle: [Role aus LinkedIn/Website]
-Branche: [Industry]
-Key Skills: [Skills]
+- Aktuelle Rolle: [aus LinkedIn/Website]
+- Branche: [Industry]
+- Key Skills: [Skills]
 
 Stimmt das noch, oder hat sich was geändert?
-> (Ja / Nein, korrigieren)
 ```
 
-**IF Research fehlgeschlagen:**
+**Falls Research fehlgeschlagen:**
 ```
 Was machst du beruflich?
-(z.B. Freelance Designer, Solo-Founder, Berater...)
-> [Rolle]
-
 In welcher Branche/Nische?
-> [Branche]
 ```
 
-### Block 3: Deine Situation (2 Min)
+## Block 3: Deine Situation (2 Min)
 
 ```
 Welche Beschreibung passt am besten?
-
 1. Ich arbeite alleine an einem Projekt
 2. Ich jongliere mehrere Projekte/Kunden
 3. Ich habe einen Hauptjob + Side Project
 4. Ich baue gerade etwas Neues auf
 
-> [Auswahl]
-
 Wie viele aktive Projekte hast du gerade?
-> [Anzahl]
-
 Was sind die wichtigsten?
-> [Projekt-Namen]
 ```
 
-### Block 4: Deine Ziele (2 Min)
+## Block 4: Deine Ziele (2 Min)
 
 ```
 Was ist dein wichtigstes Ziel für die nächsten 3 Monate?
-> [Ziel]
-
 Was steht dem gerade im Weg?
-> [Challenge]
-
 Wenn du eine Sache ändern könntest, was wäre es?
-> [Änderung]
 ```
 
-### Block 5: Zusammenarbeit (2 Min)
+## Block 5: Zusammenarbeit (2 Min)
 
 ```
 Wie soll ich mit dir kommunizieren?
-
 1. Direkt und auf den Punkt
 2. Ausführlich mit Erklärungen
 3. Als Sparringspartner (challengend)
 4. Unterstützend und ermutigend
 
-> [Auswahl]
-
 Was soll ich IMMER tun?
-(z.B. "challengen", "nachfragen bevor du loslegst")
-> [ALWAYS]
-
 Was soll ich NIE tun?
-(z.B. "generische Tipps", "Lobhudelei")
-> [NEVER]
 ```
 
-### Block 6: Arbeitsweise (2 Min)
+## Block 6: Arbeitsweise (2 Min)
 
 ```
 Wie ist dein Arbeitsrhythmus?
-
 1. Feste Zeiten (9-5)
 2. Flexibel nach Energie
 3. Intensive Sprints mit Pausen
 4. Abends/Nachts
 
-> [Auswahl]
-
 Was ist deine größte Schwäche bei der Arbeit?
-(z.B. "Prokrastination", "Overengineering", "Scope Creep")
-> [Schwäche]
 ```
 
 ## Nach dem Wizard
 
-1. **Generiere AGENTS.md** mit allen Daten
-2. **Erstelle goals/current.md** mit dem 3-Monats-Ziel
-3. **Erstelle projects/*.md** für genannte Projekte
-4. **Zeige Zusammenfassung:**
+1. **Warte auf Background-Research** (falls noch läuft)
+2. **Generiere AGENTS.md** mit kombinierten Daten
+3. **Erstelle goals/current.md** mit dem 3-Monats-Ziel
+4. **Erstelle projects/*.md** für genannte Projekte
+5. **Update progress/tips.md** mit Tip 1-4 als gesehen
+6. **Zeige Zusammenfassung:**
 
 ```
 Setup abgeschlossen! Hier ist dein Personal AI:
@@ -148,62 +117,61 @@ AGENTS.md - Ich kenne dich jetzt
 goals/current.md - Dein Ziel: [Ziel]
 projects/ - [X] Projekte angelegt
 
+─────────────────────────────────────────────────
+
 DEIN FOKUS
 [Ziel für die nächsten 3 Monate]
 
-## Deine ersten Commands
+─────────────────────────────────────────────────
 
-/pai-standup - Täglicher Check-in
-/pai-done - Tagesabschluss
-/pai-coach - Strategische Beratung
-/pai-review - Wochenreflexion
-/pai-research - Recherche
-/pai-write - Texte erstellen
-/pai-edit - Texte verbessern
-/pai-capture - Ideen festhalten
+Deine ersten Tips zum Loslegen:
 
-Ready? Dein erster Standup wartet: /pai-standup
+Tip 1: /pai-standup - Starte jeden Tag damit.
+Tip 3: Daily Notes - Alles wird in daily/ gespeichert.
+Tip 4: /pai-coach - 3 Perspektiven statt einer Meinung.
+
+Weitere Tips: /pai-tip (täglich 1 neuer Tip)
+
+Ready? Dein erster Standup wartet.
 ```
 
-## Generierte AGENTS.md
+## Generierte AGENTS.md Struktur
 
 ```markdown
-# Personal AI - Dein AI-Mitarbeiter
+# Personal AI - Your AI Business Partner
 
-## Über mich
+> The system that grows with you.
 
+## About Me
 **Name:** [Name]
-**Rolle:** [Rolle] in [Branche]
-**Fokus:** [Aktueller Fokus basierend auf Zielen]
+**Role:** [Rolle] in [Branche]
+**Location:** [falls bekannt]
 
-## Aktuelle Situation
+## Profiles
+- **LinkedIn:** [URL]
+- **Website:** [URL]
 
-**Projekte:**
-- [Projekt 1] - aktiv
-- [Projekt 2] - aktiv
+## Current Situation
+[Projekte, Fokus, Kontext]
 
-**Ziel Q[X] [Jahr]:**
-[3-Monats-Ziel]
+## Goal Q[X] [Jahr]
+[3-Monats-Ziel + Strategy]
 
-**Größte Challenge:**
-[Challenge]
+## Communication
+**Style:** [Ausgewählter Stil]
+**ALWAYS:** [Was User genannt hat]
+**NEVER:** [Was User genannt hat]
 
-## Kommunikation
+## Work Style
+**Rhythm:** [Ausgewählter Rhythmus]
+**Weakness:** [Genannte Schwäche]
 
-**Stil:** [Ausgewählter Stil]
+## Available Roles
+[Standard-Rollen-Tabelle]
 
-**ALWAYS:**
-- [Was User genannt hat]
-- Beziehe dich auf meine History
-- Challenge wenn es zu meinen Zielen passt
+## Memory Access
+[Standard-Anweisungen]
 
-**NEVER:**
-- [Was User genannt hat]
-- Sei ein Ja-Sager
-- Ignoriere meine History
-
-## Arbeitsweise
-
-**Rhythmus:** [Ausgewählter Rhythmus]
-**Schwäche:** [Genannte Schwäche]
+## File Structure
+[Standard-Struktur]
 ```

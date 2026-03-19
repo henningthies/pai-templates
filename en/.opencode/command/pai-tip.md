@@ -1,29 +1,28 @@
 ---
-description: "Daily learning tip - 22 tips in 3 weeks"
+description: "Daily learning tip - 21 tips in 3 weeks"
 ---
 
-# /pai-tip - Daily Learning Tip
+# /pai-tip - Daily learning tip
 
-> Your daily tip to use Personal AI better. 22 tips in 3 weeks.
+> 21 tips in 3 weeks to get the most out of Personal AI.
 
-## Your Task
+## Process
 
-1. **Read the progress** from `progress/tips.md`
-   - Which tip was shown last?
-   - When was it shown?
+1. **Read progress** from `progress/tips.md`
+   - Which tip was last shown? When?
 
-2. **Choose the next tip**
-   - If no tip today: show the next in sequence
-   - If user says `/pai-tip next`: skip to the next
-   - If user says `/pai-tip [number]`: show that specific tip
+2. **Choose next tip**
+   - No tip today yet: show next in sequence
+   - `/pai-tip next`: skip to next
+   - `/pai-tip [number]`: show specific tip
 
 3. **Read the tip** from `tips/`
 
-   **File Mapping (Tip number → File):**
+   **File mapping (tip number → file):**
    ```
    Week 1 (Basics):
    1  → tips/week-1/01-standup.md
-   2  → tips/week-1/02-done.md
+        (Tip 2 removed - done tracking discontinued)
    3  → tips/week-1/03-daily-notes.md
    4  → tips/week-1/04-coach.md
    5  → tips/week-1/05-research.md
@@ -50,42 +49,42 @@ description: "Daily learning tip - 22 tips in 3 weeks"
    22 → tips/week-3/22-core-workflow.md
    ```
 
-4. **Show the tip** in format:
+4. **Show the tip:**
 
 ```
-Tip #[X] of 22 - [Category]
+Tip #[X] of 21 — [Category]
 
 ## [Title]
 
-[Content of the tip]
+[Tip content]
 
 ---
-Try it: [Concrete call to action to try it]
+Try it: [Concrete call to action]
 
 Next tip: /pai-tip (tomorrow) or /pai-tip next (now)
 ```
 
-5. **Update the progress** (in the background)
-   - Update `progress/tips.md` AFTER showing the tip
-   - Show the tip immediately - update is secondary
+5. **Update progress** (in background)
+   - Update `progress/tips.md` with current tip and date
 
-## When all 22 tips are done
+## When all 21 tips are done
 
 ```
-You've completed all 22 tips!
+You've completed all 21 tips!
 
-You now know Personal AI inside and out. Time for the next step:
--> Create your first custom skill (see EXTENDING.md)
-
-Tip archive: /pai-tip [1-22] to see a tip again
+You now know Personal AI inside and out.
+Tip archive: /pai-tip [1-22] to revisit a tip (Tip 2 skipped)
 ```
 
-## ALWAYS
-- Show the tip IMMEDIATELY - no tool outputs first
-- Show only ONE tip per call
+## Behavior Rules
+
+### ALWAYS
+- Show the tip IMMEDIATELY
+- Only ONE tip per invocation
 - Make the tip practical - always with "Try it"
 - Keep tips short and actionable
+- Progress update in background
 
-## NEVER
-- Never show multiple tips at once
-- Don't skip tips automatically
+### NEVER
+- Show multiple tips at once
+- Skip tips automatically
